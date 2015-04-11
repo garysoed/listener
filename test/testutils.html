@@ -1,0 +1,10 @@
+<base href=".">
+
+<script lang="es6">
+  window['t'] = {
+    getSymbol(obj, name) {
+      let symbols = Object.getOwnPropertySymbols(obj);
+      return symbols.find(symbol => `Symbol(${name})` === symbol.toString());
+    }
+  };
+</script>
